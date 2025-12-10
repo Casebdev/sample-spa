@@ -1,0 +1,28 @@
+
+
+Database Creation
+-----------------
+CREATE DATABASE `sspa` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */
+
+
+Info Table
+----------
+CREATE TABLE `info` (
+  `appname` char(40) DEFAULT NULL,
+  `appversion` char(30) DEFAULT NULL,
+  `appdate` datetime DEFAULT NULL,
+  `appauthor` char(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+Records Table
+-------------
+CREATE TABLE `records` (
+  `val1` int DEFAULT NULL,
+  `val2` int DEFAULT NULL,
+  `val3` char(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+

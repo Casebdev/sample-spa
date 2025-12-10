@@ -1,0 +1,22 @@
+{
+  "name": "sspa",
+  "version": "1.0.0",
+  "description": "This is a sample single page web application",
+  "main": "sspa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "m.janoska",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "async": "^3.2.6",
+    "body-parser": "^2.2.1",
+    "express": "^5.2.1",
+    "express-handlebars": "^3.1.0",
+    "http": "^0.0.1-security",
+    "json-middleware": "^1.0.2",
+    "mysql": "^2.18.1",
+    "os": "^0.1.2",
+    "path": "^0.12.7"
+  }
+}
