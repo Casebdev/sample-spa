@@ -1,0 +1,141 @@
+<!-- ===================================================================  
+     Project: Sample Single Page Application - Main Screen
+
+     This provides a user interface to the SPA main screen.                                                          
+     =================================================================== -->
+
+<link rel="stylesheet" type="text/css" href="/css/sspa.css" media="screen" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<!-- ===================================================================
+     Scripts 
+     =================================================================== -->
+<script src="/src/sspa.js"></script>
+
+<!-- ===================================================================  
+     Banner area                                                          
+     =================================================================== -->
+<div class="header">
+   <div class="title">
+      <img src="/img/sampleSpa.png">
+      <div class="title2">
+         <p class="upper">Sample Single Page Application (SPA)</p>
+      </div>
+   </div>
+</div>
+
+
+<!-- ********************************************************************** 
+        The application main screen
+    
+     ********************************************************************** -->
+<div id="sspa-area" class="sspa-area">
+  
+   <div class="description-area">
+      <p class="description-title">Sample Single Page Application</p>
+	  <p class="description-explain">This is a very simple single page web application (SPA) that provides a demonstration of how to create the application and also provides a basic template as a starting point for more complex applications. It consists of a frontend user interface (UI) and a backend web server.</p>
+      <p class="description-explain">The frontend user interface is implemented on a web broswer with HTML, CSS and Javascript. The backend server is implemented using node.js with Javascript to create an HTTP server and a mysql database for storage of information.</P>
+      <p class="description-explain">See the readme.txt file for more details.</P>
+   </div>      
+   
+   <div class="description-area">
+      <p class="description-title">System Requirements</p>
+      <p class="description-explain">The main components of the application are as follows</P>
+	  <div class="description-info-nobox">
+	     <ul class="description-list">
+ 		    <li class="description-item">Browser: The environment for the UI for the application</li>
+		    <li class="description-item">Node.js: The environment for the implement the HTTP server and application logic. This creates a HTTP server using the express/handlebars libraries</li>
+		    <li class="description-item">HTML: The script used to provide the content for the application web pages. This conssits of markup elements and is built into the Document Object Model (DOM) by the browser.</li>
+		    <li class="description-item">CSS: The script that styles the application web pages and determines how the content of the HTML is displayed</li>
+ 		    <li class="description-item">Javascript: The language that is used for both the foront end browser environment and the backend node.js server environment</li>
+		    <li class="description-item">MySql: A database that is used to hold information related to the application. This can be implemented anywhere that is accessible to the application server</li>
+		 </ul>
+	  </div>
+   </div>   
+   
+   <div class="description-area">
+      <p class="description-title">Application Initialization</p>
+      <p class="description-explain">When the application first starts up it accessess information about the application from its database and displays the information. This is outlined in the box below and was dynamically updated with the DOM by the browser javascript.</P>
+	  <div class="description-info">
+	     <ul class="description-list">
+ 		    <li class="description-item" id="dbhost"></li>
+		    <li class="description-item" id="dbdatabase"></li>
+		    <li class="description-item" id="dbuser"></li>
+		    <li class="description-item" id="appname"></li>
+		    <li class="description-item" id="appversion"></li>
+		    <li class="description-item" id="appdate"></li>
+		    <li class="description-item" id="appauthor"></li>
+		 </ul>
+	  </div>
+   </div>
+   
+   <div class="description-area">
+      <p class="description-title">Read Information From Database</p>
+      <p class="description-explain">This shows how to get information from a database table and then dynamically create elements in the DOM to display each record. Press button to get the information from the Records table.</P>
+	  <div class="description-info">
+	     <input class="description-button" id="input1" type="button" value="Get Database Info" onclick="getRecords('Hello','Test')">
+		 <input class="description-button" id="input2" type="button" value="Clear Display" onclick="clearRecords()">
+		 <p class="description-text" id="getresult">Status: </p>
+		 
+		 <div class="description-dynamic" id="record-area">
+		 </div>
+	  </div>
+   </div>
+
+   <div class="description-area">
+      <p class="description-title">Write Information to the Database</p>
+      <p class="description-explain">This shows how to place information into a database table. Enter the three values and then press enter to write them to the Records table.</P>
+	  <div class="description-info">
+         <input class="description-tinp" id="inputv1" type="text" placeholder="val1 (integer)">
+		 <input class="description-tinp" id="inputv2" type="text" placeholder="val2 (integer)">
+		 <input class="description-tinp" id="inputv3" type="text" placeholder="val3 (string)">
+         <input class="description-button" id="input3" type="button" value="Enter" onclick="setRecords()">   
+		 
+		 <p class="description-text" id="setresult">Status: </p>
+      </div>
+   </div>
+   
+  <div class="description-area">
+      <p class="description-title">Delete Information from the Database</p>
+      <p class="description-explain">This shows how to delete information from a database table. Enter the two values and then press <enter> to delete all records with a matching val1 and val2 from the Records table.</P>
+	  <div class="description-info">
+         <input class="description-tinp" id="inputd1" type="text" placeholder="val1 (integer)">
+		 <input class="description-tinp" id="inputd2" type="text" placeholder="val2 (integer)">
+         <input class="description-button" id="input4" type="button" value="Enter" onclick="delRecords()">   
+		 
+		 <p class="description-text" id="delresult">Status: </p>
+      </div>
+   </div>   
+   
+</div>
+
+
+<!-- =================================================================== 
+     Footer Area        
+                               
+     =================================================================== -->
+<br>
+<div class="footer">
+   <div class="footer-message">
+      <br>
+      <br>
+      <br>
+      <br>
+      <p>Version v{{version}}</p>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
