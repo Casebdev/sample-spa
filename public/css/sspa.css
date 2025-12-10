@@ -1,0 +1,900 @@
+
+/* ======================================================================
+   Single page application style sheet - main application
+   ====================================================================== */
+/* ======================================================================
+   Header
+   ====================================================================== */
+div.header
+   {
+   display: block;
+   width: 100%;
+   min-width: 650px;
+   margin: 0px;
+   margin-bottom: 3px;
+   padding: 0px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   color: white;
+   background-color:  rgb(178,115,27);
+   font-family:  Arial,Helvetica,sans-serif;
+   overflow: auto;
+   }
+
+div.header div.title
+   {
+   display: inline-block;
+   padding: 0px;
+   padding-left: 10px;
+   margin: 0px;
+   }
+
+div.header div.title img
+   {
+   display: inline-block;
+   width: 70px;
+   height: 70px;
+   }
+
+div.header div.title2
+   {
+   display: inline-block;
+   vertical-align: top;
+   padding: 0px;
+   padding-left: 10px;
+   margin: 0px;
+   }
+
+div.header div.title2 p.upper
+   {
+   display: block;
+   padding: 0px;
+   margin: 0px;
+   padding-left: 10px;
+   position: relative;
+   top: -5px;
+   font-size: 40px;
+   }
+   
+div.itemlist
+   {
+   padding: 10px;
+   }
+div.itemlist p
+   {
+   margin: 0px;
+   padding 0px: 
+   }
+   
+   
+/* ======================================================================
+   Main area
+   ====================================================================== */   
+div.description-area
+   {
+   margin-top: 0px;
+   margin-bottom: 20px;
+   }
+
+div.description-area p.description-title
+   {
+   font-size: 18px;
+   margin-top: 10px;
+   margin-bottom: 5px;
+   text-decoration: underline;
+   }
+   
+div.description-area p.description-explain
+   {
+   font-size: 14px;
+   margin-top: 0px;
+   margin-bottom: 5px;
+   max-width: 800px;
+   }   
+    
+div.description-area li.description-item
+  { 
+  list-style-type: none;
+  }
+  
+input.description-button
+  {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  }	
+  
+input.description-tinp
+  {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  }	  
+  
+p.description-text
+   {
+   margin-left: 10px;
+   }  
+ 
+div.description-info
+   {
+   border: 1px solid black;
+   margin-top: 10px;
+   max-width: 700px;
+   min-height: 100px;
+   }
+
+div.description-info-nobox
+   {
+   margin-top: 10px;
+   max-width: 700px;
+   min-height: 100px;
+   }   
+
+
+/* ======================================================================
+   Footer
+   ====================================================================== */
+div.footer
+   {
+   font-family:  Arial,Helvetica,sans-serif;
+   border-radius: 0px;
+   height: 80px;
+   width: 100%;
+   min-width: 650px;
+   color: white;
+   background-color:  rgb(178,115,27);
+   }
+
+div.footer-message
+   {
+   width: 100%;
+   margin: 0px;
+   padding: 0px;
+   margin-left: 10px;
+   margin-right: 50px;
+   font-size: 10px;
+   }
+   
+div.footer-message p
+   {
+   margin: 0px;
+   padding: 0px;
+   }   
+
+div.footer-blank
+   {
+   height: 300px;
+   width: 100%;
+   min-width: 650px;
+   background-color:  white;
+   }
+
+
+
+
+
+
+/* ======================================================================
+   Sales Lead Scorecard area
+   ====================================================================== */
+div.scorecard
+   {
+   display: block;
+   width: 100%;
+   min-width: 650px;
+   margin: 0px;
+   margin-bottom: 3px;
+   padding: 0px;
+   padding-top: 0px;
+   padding-bottom: 10px;
+   color: white;
+   background-color:  rgb(53,86,125);
+   font-family:  Arial,Helvetica,sans-serif;
+   overflow: auto;
+   }
+   
+div.scorecard div.scorecard-area
+   {
+   display: inline-block;
+   vertical-align: top;
+   }   
+   
+div.scorecard div.scorecard-summary
+   {
+   display: inline-block;
+   vertical-align: top;
+   margin-left: -5px;
+   }      
+   
+div.scorecard p.scorecard-title
+   { 
+   font-size: 14px;
+   margin-left: 5px;
+   }
+  
+table.leadstat-table
+   {
+   margin: 0px;
+   padding: 0px;
+   margin-left: 20px;
+   margin-bottom: 5px;
+   }
+
+table.leadstat-table th.hdg
+   {
+   text-align: left;
+   font-size: 12px;
+   min-width: 60px;
+   padding-right: 10px;
+   }
+
+table.leadstat-table tr
+   {
+   white-space: nowrap;
+   height: 15px;
+   }
+   
+table.leadstat-table td.data
+   {
+   text-align: left;
+   font-size: 10px;
+   padding-right: 20px;
+   min-width: 60px;
+   }
+   
+td.bar-activity-area
+   {
+   display: block;
+   width: 100px;
+   height: 5px;
+   border: 1px solid white;
+   margin: 0px;
+   padding: 0px;
+   margin-top: 3px;
+   }
+
+div.bar-activity
+   {
+   width: 30%;
+   height: 100%;
+   margin: 0px;
+   padding: 0px;
+   background-color: rgb(140,186,188);
+   }   
+   
+   
+/* ======================================================================
+   Sales Lead list area
+   ====================================================================== */
+div.slead-area
+   {
+   display: inline-block;
+   font-family:  Arial,Helvetica,sans-serif;
+   width: 100%;
+   margin: 0px;
+   padding: 0px;
+   background-color: white;
+   overflow: auto;
+   }
+
+div.slead-area div.search
+   {
+   display: block;
+   padding: 0px;
+   margin: 0px;
+   margin-right: 20px;
+   margin-top: 15px;
+   }
+
+div.slead-area div.search input.search-quick
+   {
+   display: inline-block;
+   padding: 0px;
+   margin: 0px;
+   font-size: 15px;
+   color: grey;
+   vertical-align: top;
+   }
+
+div.slead-area div.search img
+   {
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   margin: 0px;
+   margin-top: -4px;
+   margin-left: 5px;
+   padding: 0px;
+   opacity: 0.5;
+   cursor: pointer;
+   vertical-align: top;
+   }
+
+div.slead-area div.list-header
+   {
+   display: block;
+   margin: 0px;
+   padding: 0px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   font-size: 30px;
+   color: grey;
+   background-color: white;
+   }
+
+div.slead-area div.list-header p
+   {
+   display: block;
+   padding: 0px;
+   margin: 0px;
+   }
+
+div.slead-area div.list-header div.actions
+   {
+   display: block;
+   margin: 0px;
+   margin-top: 10px;
+   padding: 0px;
+   }
+
+div.slead-area div.list-header div.actions img
+   {
+   display: inline-block;
+   width: 25px;
+   height: 25px;
+   margin: 0px;
+   padding: 0px;
+   opacity: 0.5;
+   cursor: pointer;
+   }
+
+ul.slead-list
+   {
+   list-style-type: none;
+   margin: 0px;
+   padding: 0px;
+   width: 100%;
+   min-height: 100px;
+   }
+
+ul.slead-list p.note
+   {
+   color: grey;
+   font-size: 20px;
+   margin: 0px;
+   padding: 0px;
+   margin-left: 20px;
+   margin-bottom: 10px;
+   }
+
+ul.slead-list li
+   {
+   display: block;
+   width: 100%;
+   margin: 0px;
+   padding: 0px;
+   margin-bottom: 15px;
+   }
+
+div.slead-area div.list-header div.actions img:hover
+   {
+   opacity: 0.8;
+   }
+
+
+/* ======================================================================
+   Sales Lead list
+   ====================================================================== */
+p.list-hdg
+   {
+   font-size: 15px;
+   margin: 0px;
+   padding: 0px;
+   margin-bottom: 5px;
+   margin-top: 10px;
+   text-decoration: underline;
+   }
+
+table.list-table
+   {
+   margin: 0px;
+   padding: 0px;
+   margin-bottom: 20px;
+   table-layout:auto;
+   max-width: 100%;
+   }
+
+table.list-table th.hdg
+   {
+   text-align: left;
+   font-size: 20px;
+   min-width: 60px;
+   padding-right: 20px;
+   }
+
+table.list-table tr
+   {
+   white-space: nowrap;
+   }
+
+table.list-table td.data
+   {
+   text-align: left;
+   font-size: 16px;
+   padding-right: 20px;
+   min-width: 60px;
+   }
+
+table.list-table tr.list-data:hover
+   {
+   background-color: #d0d0d0;
+   }
+
+
+/* ======================================================================
+   Sales lead card entry
+   ====================================================================== */
+
+div.card
+   {
+   display: block;
+   position: absolute;
+   background-color: white;
+   border: 1px solid black;
+   width: 612px;
+   margin: 0px;
+   margin-top: 20px;
+   margin-bottom: 40px;
+   margin-left: 20px;
+   padding: 0px;
+   padding-bottom: 0px;
+   font-size: 0px;
+   z-index: 1;
+   }
+
+div.cardtitle
+   {
+   margin: 0px;
+   padding: 0px;
+   margin-top: 10px;
+   margin-bottom: 20px;
+   }
+
+div.cardtitle p.cardtitle
+   {
+   display: inline-block;
+   vertical-align: top;
+   font-size: 30px;
+   margin: 0px;
+   margin-top: 10px;
+   padding: 0px;
+   }
+
+div.cardtitle img.cardtitle
+   {
+   display: inline-block;
+   border: 1px solid black;
+   vertical-align: top;
+   width: 40px;
+   height: 40px;
+   padding: 0px;
+   margin: 10px;
+   }
+
+div.cardtitle div.cardbuttons
+   {
+   display: inline-block;
+   vertical-align: top;
+   float: right;
+   margin: 10px;
+   padding: 0px;
+   }
+
+div.cardtitle img.cardoption
+   {
+   display: inline-block;
+   vertical-align: top;
+   width: 35px;
+   height: 35px;
+   opacity: 0.5;
+   cursor: pointer;
+   margin-right: 10px;
+   }
+   
+div.cardrow
+   {
+   display: block;
+   margin: 0px;
+   padding: 0px;
+   font-size: 0px;
+   }
+
+div.cardfield
+   {
+   border: 1px solid black;
+   display: inline-block;
+   vertical-align: top;
+   height: 40px;
+   margin: 0px;
+   margin-right: -2px;
+   margin-top: 0px;
+   padding: 0px;
+   padding-left: 10px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   font-size: 0px;
+   }
+
+div.cardfieldtall
+   {
+   border: 1px solid black;
+   display: inline-block;
+   vertical-align: top;
+   height: 200px;
+   margin: 0px;
+   margin-right: -2px;
+   margin-top: 0px;
+   padding: 0px;
+   padding-left: 10px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   font-size: 0px;
+   }
+
+div.cardftitle
+   {
+   display: block;
+   font-size: 10px;
+   margin: 0px;
+   padding: 0px;
+   padding-bottom: 5px;
+   }
+
+div.cardftitle p
+   {
+   display: inline-block;
+   vertical-align: top;
+   margin: 0px;
+   padding: 0px;
+   padding-bottom: 5px;
+   }
+
+div.cardftitle img
+   {
+   display: inline-block;
+   vertical-align: top;
+   float: right;
+   margin: 0px;
+   padding: 0px;
+   padding-bottom: 5px;
+   padding-right: 5px;
+   width: 15px;
+   height: 15px;
+   opacity: 0.5;
+   }
+
+p.cardfinfo
+   {
+   display: block;
+   font-size: 16px;
+   margin: 0px;
+   padding: 0px;
+   }
+
+select.cardfsel
+   {
+   display: block;
+   border: 0px;
+   margin: 0px;
+   padding: 0px;
+   padding-right: 10px;
+   width: 100%;
+   font-size: 16px;
+   }
+
+input.cardfinp
+   {
+   display: block;
+   border: none;
+   margin: 0px;
+   margin-right: 20px;
+   padding: 0px;
+   width: 99%;
+   font-size: 16px;
+   }
+   
+div.cardbuttonitem
+   {
+   display: inline-block;
+   vertical-align: top;
+   margin-right: 20px;
+   }
+   
+button.cardfbut
+   {
+   display: inline-block;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: clip;
+   vertical-align: top;
+   border: 1px solid black;
+   margin: 0px;
+   margin-right: 10px;
+   padding: 1px;
+   font-size: 12px;
+   }   
+   
+p.cardfbutinfo
+   {
+   display: inline-block;
+   border: none;
+   margin: 0px;
+   margin-bottom: 10px;
+   padding: 1px;
+   font-size: 16px;
+   }      
+
+textarea.cardftexta
+   {
+   display: block;
+   border: none;
+   margin: 0px;
+   padding: 0px;
+   width: 99%;
+   font-size: 16px;
+   font-family:  Arial,Helvetica,sans-serif;
+   }
+
+div.carddropdown
+   {
+   display: none;
+   position: relative;
+   top: -40px;
+   margin: 0px;
+   padding: 0px;
+   padding-bottom: 10px;
+   width: 200px;
+   background-color: white;
+   border: 2px solid black;
+   z-index: 2;
+   }
+
+div.carddropdown div.carddroptitle
+   {
+   display: block;
+   margin: 0px;
+   padding: 0px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   margin-left: 5px;
+   font-size: 12px;
+   }
+
+div.carddropdown div.carddroptitle p
+   {
+   display: inline-block;
+   vertical-align: top;
+   margin: 0px;
+   padding: 0px;
+   }
+
+div.carddropdown div.carddroptitle img
+   {
+   display: inline-block;
+   vertical-align: top;
+   float: right;
+   margin: 0px;
+   margin-right: 5px;
+   padding: 0px;
+   width: 15px;
+   height: 15px;
+   opacity: 0.5;
+   }
+
+div.carddropdown div.carddroplist
+   {
+   max-height: 300px;
+   //max-width: 200px;
+   overflow-y: auto;
+   overflow-x: hidden;
+   }
+
+div.carddropdown p.carddropitem
+   {
+   margin: 0px;
+   padding: 0px;
+   margin-bottom: 3px;
+   margin-left: 8px;
+   font-size: 12px;
+   cursor: pointer;
+   }
+   
+div.carddropdown label.carddropitem
+   {
+   margin: 0px;
+   padding: 0px;
+   margin-bottom: 3px;
+   margin-left: 8px;
+   font-size: 12px;
+   cursor: pointer;
+   }   
+
+div.carddropdown p.carddropitem:hover
+   {
+   opacity:0.5;
+   }
+
+div.cardftitle img:hover
+   {
+   opacity:0.8;
+   }
+
+div.carddropdown div.carddroptitle img:hover
+   {
+   opacity:0.8;
+   }
+   
+div.emailinfo
+   {
+   display: block;
+   margin-bottom: 30px;
+   border: none;
+   font-size: 16px;
+   }
+   
+p.emtemplate
+   {
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-bottom: 5px;
+   margin-top: 5px;
+   font-size: 12px;
+   }
+   
+p.emstatus
+   {
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-bottom: 20px;
+   margin-top: 5px;
+   font-size: 12px;
+   }
+   
+p.emaddr
+   {
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-bottom: 0px;
+   margin-top: 5px;
+   font-size: 18px;
+   }
+   
+p.emsubject
+   {
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-bottom: 0px;
+   margin-top: 20px;
+   font-size: 18px;
+   }
+   
+div.emailbody
+   {
+   display: block;
+   border: none;   
+   font-size: 16px;
+   }   
+   
+textarea.emailtext
+   {
+   display: block;
+   border: none;   
+   min-height: 400px;
+   resize: none;
+   margin: 10px;
+   padding: 0px;
+   width: 90%;
+   font-size: 16px;
+   font-family:  Arial,Helvetica,sans-serif;
+   }   
+   
+textarea.emailtext:focus 
+   {
+   outline: none;
+   }   
+
+div#email-entry
+   {	   
+   border: 2px solid black;
+   width: 750px;
+   }
+   
+div#cardfield-date
+   {
+   width: 120px;
+   }
+   
+div#cardfield-time
+   {
+   width: 120px;
+   }   
+ 
+div#cardfield-salesperson
+   {
+   width: 255px;
+   }
+
+div#cardfield-saleclosed
+   {
+   width: 75px;
+   }
+
+
+div#cardfield-sendemail
+   {
+   width: 600px;
+   }   
+   
+div#cardfield-actiondate
+   {
+   width: 170px;
+   }   
+ 
+div#cardfield-actiontext
+   {
+   width: 420px;
+   }     
+   
+div#cardfield-leadname
+   {
+   width: 600px;
+   }
+   
+div#cardfield-email
+   {
+   width: 385px;
+   }
+
+div#cardfield-phone
+   {
+   width: 205px;
+   }
+
+div#cardfield-geoloc
+   {
+   width: 600px;
+   }
+
+div#cardfield-appl
+   {
+   width: 600px;
+   }
+
+div#cardfield-about
+   {
+   width: 600px;
+   }
+   
+div#cardfield-product
+   {
+   width: 600px;
+   }   
+   
+div#cardfield-comp
+   {
+   width: 600px;
+   }   
+   
+div#cardfield-promo
+   {
+   width: 600px;
+   }   
+
+div#cardfield-note
+   {
+   width: 600px;
+   }
+
+
+
