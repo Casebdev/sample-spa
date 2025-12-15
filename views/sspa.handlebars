@@ -56,7 +56,9 @@
    <div class="description-area">
       <p class="description-title">Application Initialization</p>
       <p class="description-explain">When the application first starts up it accessess information about the application from its database and displays the information. This is outlined in the box below and was dynamically updated with the DOM by the browser javascript.</P>
+      <p class="description-explain">If the mySql database server can not be reached an error is indicated. If the database does not exist on the server then it is created.</p> 
 	  <div class="description-info">
+	  	 <p class="description-text" id="inforesult">Status: </p>
 	     <ul class="description-list">
  		    <li class="description-item" id="dbhost"></li>
 		    <li class="description-item" id="dbdatabase"></li>

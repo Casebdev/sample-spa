@@ -43,7 +43,7 @@ function initialize()
 // ***************************************************************************
 function errorAppInfo(xhr,data,status)
    {
-   setInnerHTML("dbhost","Error loading application information: "+xhr.statusText);
+   setInnerHTML("inforesult","Error loading application information: "+xhr.statusText);
    }
    
    
@@ -64,12 +64,18 @@ function processAppInfo(data,status)
    chk=checkError(info);
    if(chk.result==1)
       {
-      setInnerHTML("dbhost","Error loading application information: "+chk.msg);		  
+      setInnerHTML("inforesult","Error loading application information: "+chk.msg);		  
       }
    else
       {
       //process the information returned by the server
       //update the inner HTML of various DOM elements - this will display information on the main display of the application
+	  
+	  if(info.dbcreated==1)
+		 setInnerHTML("inforesult","Status: Database not found - created success");
+	  else
+   	     setInnerHTML("inforesult","Status: Database read success");
+	  
       setInnerHTML("dbhost","DB host: "+info.dbhost);
       setInnerHTML("dbdatabase","DB dbase: "+info.dbdatabase);
       setInnerHTML("dbuser","DB user: "+info.dbuser);

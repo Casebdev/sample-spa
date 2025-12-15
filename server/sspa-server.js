@@ -19,7 +19,7 @@ var server=require('http').Server(app);
 var sspaDb={};			//database access information
 
 //version information
-const SW_VERSION = '1.1.0';
+const SW_VERSION = '1.2.0';
 
 //error system constants
 const ERR_OK = 0;
@@ -30,6 +30,7 @@ const ERR_SYSTEM = 4;
 
 //Server API errors
 var errExample=makeErr(ERR_ERROR,'SPA-EXAMPLE','This is an example API error');
+var errNoMysqlHost=makeErr(ERR_ERROR,'SPA-NOMYSQLHOST','Unable to contact MySQL host');
 
 //mysql database information - enter your information here
 sspaDb.host='127.0.0.1';
@@ -174,13 +175,79 @@ apiRoutes.post('/get-info', function(req,res)
    {
    var resp={};
    var db;
+   var createDb;
    
    //response - the information on the database configuration
    resp.dbhost=sspaDb.host;
    resp.dbdatabase=sspaDb.database;
    resp.dbuser=sspaDb.user;
+   resp.res=[];
+   resp.dbcreated=0;
 
    async.waterfall([
+   
+      function(callback)
+         {
+	     //see if the database exists	
+		 q="select 1;";
+         connectQuery(db,sspaDb,q,function(err,results,fields)
+            {	
+			createDb=false;
+			
+            if(!err)
+               {
+               if(results.length!=0) resp.res=results;
+               }
+			else
+			   {
+               if(err.code=="ETIMEDOUT") err=errNoMysqlHost;
+			   if(err.code=="ER_BAD_DB_ERROR")
+			      {
+				  err=null;
+				  createDb=true;
+				  };
+               };			   
+
+            callback(err,createDb);
+            });
+          },  
+		  
+      //create the database if necessary
+	  function(crDb,callback)
+	     {
+		 if(crDb)
+		    {
+			resp.dbcreated=1;
+			
+   		    q="create database "+sspaDb.database+";";
+            connectQuery(db,{host:sspaDb.host,database:"",user:sspaDb.user,password:sspaDb.password},q,function(err,results,fields)
+               {	
+		       callback(err,crDb);
+		       });
+			}
+		 else 
+			callback(null,crDb);
+	     },
+		 
+	  //add tables to new database if necessary
+      function(crDb,callback)
+	     {
+		 if(crDb)
+		    {
+		    q="create table "+sspaDb.database+".info (appname char(40), appversion char(30), appdate datetime, appauthor char(40));";
+		    q+="create table "+sspaDb.database+".records (val1 int, val2 int, val3 char(40));";
+		    q+="insert into "+sspaDb.database+".info values ('Sample Single Page Application','"+SW_VERSION+"',now(),'m.janoska');";
+			
+            sspaDb.multipleStatements=true;			
+            connectQuery(db,sspaDb,q,function(err,results,fields)
+               {	
+			   sspaDb.multipleStatements=false;	
+		       callback(err);
+		       });
+			}
+		 else 
+			callback(null);	 
+	     },		  
    
       //get the user information
       function(callback)
@@ -188,8 +255,7 @@ apiRoutes.post('/get-info', function(req,res)
 	     //sql to query rows from the table	
          q="select * from info;";
          connectQuery(db,sspaDb,q,function(err,results,fields)
-            {
-			resp.res=[];	
+            {	
             if(!err)
                {
                if(results.length!=0) resp.res=results;

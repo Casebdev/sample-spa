@@ -51,6 +51,8 @@ Knowledge Prerequisites
 -----------------------
 Development of a single page web application is predicated on an underatanding of many things. The following is a summary of these requirements.
 
+A very good source of information on everything related to this topic is: https://www.w3schools.com/
+
 
 General
 -------
