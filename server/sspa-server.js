@@ -19,7 +19,7 @@ var server=require('http').Server(app);
 var sspaDb={};			//database access information
 
 //version information
-const SW_VERSION = '1.0.0';
+const SW_VERSION = '1.1.0';
 
 //error system constants
 const ERR_OK = 0;

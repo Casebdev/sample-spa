@@ -1,16 +1,54 @@
 Simple Single Page Application (SPA)
 ====================================
-Date
-----
-10 Dec 2025
+System Prerequisits
+-------------------
+The follwing must be installed on the local computer
 
-Version
--------
-v1.0.0
+1 - node.js
+2 - mysql server
 
 
-Prerequisites to Understanding
--------------------------------
+Initialization
+--------------
+One the repository has been cloned or copied the following must be performed
+
+1 - install the node libraries. Move to the server folder where package.json file is location and execute
+
+   npm install
+   
+This will create the node_modules folder will all of the required node libraries
+
+2 - set mySql credentials. Edit the sspa.js file and set the values for sspaDb.user and sspaDb.password
+
+   //mysql database information - enter your information here
+   sspaDb.host='127.0.0.1';
+   sspaDb.database='sspa';
+   sspaDb.user='XXXXX';
+   sspaDb.password='XXXXX';
+
+If the mySql server is running on a computer other than the local computer then also set sspaDb.host 
+
+3 - start the sspa server. Move to the \server folder and execute
+
+   node sspa-server.js
+   
+This will start the http server listening on port 3003
+
+
+4 - start the application. From a browser execute
+
+   http: localhost:3000
+   
+   or
+   
+   http: 127.0.0.1:3003
+   
+This will send an http get request for the \ route on the server which will download the HTML for the sample single page application
+
+
+
+Knowledge Prerequisites
+-----------------------
 Development of a single page web application is predicated on an underatanding of many things. The following is a summary of these requirements.
 
 
@@ -64,7 +102,7 @@ Handlebars Library: This is a node.js library to allow creation of HTML pages fr
 
 Folder Structure
 -----------------
-  .    Root directory of the Sample SPA system 
+  \    Root directory of the Sample SPA system 
   |
   |
   |-- \views     web pages - handlebars format (HTML)
@@ -94,6 +132,9 @@ Folder Structure
 
 Files
 -----
+\readme.txt - general information on the SSPA application
+\sspa-changelog.txt - development history log of the SSPA application
+
 views\sspa.handlebars - body HTML returned by the server for the HTTP GET \ - this is the main page for the SPA
 views\health.handlebars - body HTML returned by the server for the HTTP GET request to \health - this is used by some hosts to determine that an application is alive
 views\500.handlbars - body HTML returned by the HTTP server if there is an internal error to a request
@@ -107,15 +148,12 @@ public\img\sampleSpa.png - image file for the application icon
 
 server\sspa-server.js - server side application javascript
 server\package.json - NPM application information file and dependancies 
-server\readme.txt - general information on the SSPA application
-server\sspa-changelog.txt - development history log of the SSPA application
 server\database-structure.txt - information on the database used by the application
-
 
 
 MySQL Database Structure
 ------------------------
-See the file database-structure.txt for details
+See the file server\database-structure.txt for details
 
 
 Server Executable
@@ -124,32 +162,6 @@ sspa.js - node js SPA server application code
 package.json - application manifest
 
 
-Software development on a local computer
-----------------------------------------
-Execute a git clone or copy the distribution folders
-
-1 - depends on location of the repository
-
-Ensure the following is available:
-
-1 - node js
-2 - mysql
-
-Get all node js dependancies
-
-1 - npm install  (from folder with the package.json file)
-
-Edit the server source file to ensure the various resources are correct
-
-1 - location and creds for mysql
-
-Run the server
-
-node sspa.js
-
-Browser access using
-
-http://localhost:3003
 
 
 
