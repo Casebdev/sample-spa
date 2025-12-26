@@ -1,5 +1,5 @@
-Simple Single Page Application (SPA)
-====================================
+Simple Single Page Application (SSPA)
+=====================================
 System Prerequisits
 -------------------
 The follwing must be installed on the local computer
@@ -10,15 +10,15 @@ The follwing must be installed on the local computer
 
 Initialization
 --------------
-One the repository has been cloned or copied the following must be performed
+Once the repository has been cloned or copied the following must be performed
 
-1 - install the node libraries. Move to the server folder where package.json file is location and execute
+1 - Install the node libraries. Open a terminal window. Move to the server folder where the package.json file is located and then execute
 
    npm install
    
-This will create the node_modules folder will all of the required node libraries
+This will create the node_modules folder and download all of the required node libraries used by SSPA.
 
-2 - set mySql credentials. Edit the sspa.js file and set the values for sspaDb.user and sspaDb.password
+2 - Edit the server source code to set the mySql server access credentials. Edit the sspa-server.js file using a text editor of your choice (notepad, notpad++, etc). Set the values for sspaDb.user and sspaDb.password variables
 
    //mysql database information - enter your information here
    sspaDb.host='127.0.0.1';
@@ -26,39 +26,37 @@ This will create the node_modules folder will all of the required node libraries
    sspaDb.user='XXXXX';
    sspaDb.password='XXXXX';
 
-If the mySql server is running on a computer other than the local computer then also set sspaDb.host 
+If the mySql server is running on a computer other than the local computer then also set the sspaDb.host variable. 
 
-3 - start the sspa server. Move to the \server folder and execute
+3 - Start the sspa server. Open a terminal window. Move to the \server folder and execute
 
    node sspa-server.js
    
 This will start the http server listening on port 3003
 
 
-4 - start the application. From a browser execute
+4 - Start the application. From a browser execute
 
-   http: localhost:3000
+   http://localhost:3003
    
    or
    
-   http: 127.0.0.1:3003
+   http://127.0.0.1:3003
    
-This will send an http get request for the \ route on the server which will download the HTML for the sample single page application
+This will send an http get request for the \ route on the HTTP server which will download the HTML for the sample single page application.
 
 
 
 Knowledge Prerequisites
 -----------------------
-Development of a single page web application is predicated on an underatanding of many things. The following is a summary of these requirements.
+Development of a single page web application (SPA) is predicated on an underatanding of many things. The following is a summary of these requirements.
 
 A very good source of information on everything related to this topic is: https://www.w3schools.com/
 
 
-General
--------
-HTTP: This is the HyperText Transport Protocol. This is the information that is exchanged between a Browser and an HTTP Server. The browser provides 
-a user interface (keyboard, mouse, screen, etc) and renders the information on the display. The HTTP server takes requests from the browser and responds 
-with HTML web pages and other data. A very good basic understanding of these concepts is required to understand the development of the SPA, especially
+General Knowledge
+-----------------
+HTTP: This is the HyperText Transport Protocol. This is the information that is exchanged between a Browser and an HTTP Server. The browser provides a user interface (keyboard, mouse, screen, etc) and renders the information on the display. The HTTP server takes requests from the browser and responds with HTML web pages and other data. A very good basic understanding of these concepts is required to understand the development of the SPA, especially
 the concepts of HTTP GET and HTTP POST communications as well as AJAX (XMLHttpRequest) communications.
 
 See: https://nodejs.org/en/learn/http/anatomy-of-an-http-transaction
@@ -66,16 +64,15 @@ See: https://nodejs.org/en/learn/http/anatomy-of-an-http-transaction
 
 Client Side
 -----------
-This makes use of the browser environment with various libraries. Key elements are as follows
+This makes use of the browser environment. Key items to understand are as follows
 
-Document Object Model (DOM):  This is the browsers representation of the HTML page that has been loaded. Must have an in depth understanding of the structure and
-how to manipulate the DOM. This is key to creating a Single Page Application.
+HTML: The files that are used to generate content for display on a web browser. This is represented internally by the browser as the DOM (see below) and is available for manipulation using javascript.
 
-HTML: The files that are used to generate content for display on a web browser. This is represnted internally by the browser as the DOM and is available for manipulation.
+CSS: The files that are used to control the styling of the HTML pages. This information is also represented internally by the browser within the DOM and is avaiable for manipulation using javascript.
 
-CSS: The files that are used to control the styling of the HTML pages. This information is also represnted internally by the browser within the DOM and is avaiable for manipulation.
+Javascript: The programming language of the browser. This allows the DOM to be manipulated. There are many libraries provided by te browser to manipulate the DOM and other features. 
 
-Javascript: The programming language of the browser. This allows the DOM to be manipulated. There are many libraries provided by te browser to manipulate the DOM and other features.
+Document Object Model (DOM):  This is the browser's representation of the HTML page that has been loaded. Must have an in depth understanding of the structure and how to manipulate the DOM. This is key to creating a Single Page Application.
  
 
 Server Side
@@ -84,27 +81,24 @@ This makes use of the node.js environment with a number of key libraries to impl
 
 See: https://www.w3tutorials.net/blog/how-does-nodejs-create-http-servers/
 
-Node.js: What does it mean to make use of node.js as an environment? Most important is that code is developed in Javascript and Node.js providesd an interface to 
-the resources of the server. The second most prominent feature is that code is executed in a single thread and it makes extensive use of asynchronous code 
-development model - this can be implemented with native Javascript 'async/await' statements or with Javascript 'promises' or you can make use of callback
-functions (with an appropriate helper library such as 'async' - to avoid callback hell!!). Regardless of the model chosen you REALLY need to understand 
-the intacacies of asyncronous code development. 
+Node.js: This is the proggramming environment for the server - what does it mean to make use of node.js as an environment? Most important is that code is developed in Javascript and Node.js providesd an interface to 
+the resources of the server computer. The second most prominent feature is that code is executed in a single thread and makes extensive use of asynchronous code development techniques - which can be implemented with native Javascript 'async/await' statements or with Javascript 'promises' or through the use of callback functions (with an appropriate helper library such as 'async' - to avoid callback hell!!). Regardless of the model chosen you REALLY need to understand the details of asyncronous code development. 
 
 Javascript: The programming language of the Node.js environment. Many third party libraries are available to accomplish almost any task.
 
 NPM: This is the package manager for Node.js. An extensive knowledge is not required but a good basic understanding will go a LONG WAY!
 
-ASYNC Library: For the sample SPA HTTP server we make use of callbacks and the ASYNC librabry of helper functions - specifically the async.waterfall() construct.
+ASYNC Library: For the SSPA HTTP server we make use of callbacks and the ASYNC librabry of helper functions - specifically the async.waterfall() construct - learning well!
 
-Express Library: This is a node.js library to create an HTTP server. Will need a strong understanding of this to implement the server.
+Express Library: This is a node.js library to create an HTTP server. You will need a strong understanding of this to implement the server.
 
-Handlebars Library: This is a node.js library to allow creation of HTML pages from templates. Need a good basic understanding  
+Handlebars Library: This is a node.js library to allow creation of HTML pages from templates. Need a good basic understanding.
 
 
 
 Folder Structure
 -----------------
-  \    Root directory of the Sample SPA system 
+  \    Root directory of the SSPA system 
   |
   |
   |-- \views     web pages - handlebars format (HTML)
@@ -160,8 +154,9 @@ See the file server\database-structure.txt for details
 
 Server Executable
 -----------------
-sspa.js - node js SPA server application code
+sspa-server.js - node.js SSPA server application code
 package.json - application manifest
+
 
 
 
