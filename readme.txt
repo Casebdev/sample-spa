@@ -8,6 +8,11 @@ The follwing must be installed on the local computer
 2 - mysql server
 
 
+Fun-Stuff
+---------
+this was added as a test
+
+
 Initialization
 --------------
 Once the repository has been cloned or copied the following must be performed
