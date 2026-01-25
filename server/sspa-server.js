@@ -7,7 +7,7 @@
 
 //libraries needed
 var path=require('path');
-var mysql=require('mysql');
+var mysql=require('mysql2');
 var express=require('express');
 var app=express();
 var async=require('async');
@@ -19,7 +19,7 @@ var server=require('http').Server(app);
 var sspaDb={};			//database access information
 
 //version information
-const SW_VERSION = '1.3.0';
+const SW_VERSION = '1.4.0';
 
 //error system constants
 const ERR_OK = 0;
@@ -35,8 +35,8 @@ var errNoMysqlHost=makeErr(ERR_ERROR,'SPA-NOMYSQLHOST','Unable to contact MySQL 
 //mysql database information - enter your information here
 sspaDb.host='127.0.0.1';
 sspaDb.database='sspa';
-sspaDb.user='mark';
-sspaDb.password='mark';
+sspaDb.user='mark2';
+sspaDb.password='mark2';
 
 // *****************************************************************************
 // Initializaion sequence
